@@ -1,0 +1,20 @@
+SERVER RESPONCE CODES 
+
+200                  OK
+
+401                  UNAUTHORIZED
+
+500                  INTERNAL SERVER ERROR
+
+
+usually the backend is divided into 3 main portions 
+
+
+1) modals  (look of the product,features)
+
+2) routes
+
+3) controller (brain or action to be take on visiting routes) 
+
+
+
