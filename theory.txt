@@ -17,4 +17,10 @@ usually the backend is divided into 3 main portions
 3) controller (brain or action to be take on visiting routes) 
 
 
+learn about moongoose documentation
+
+crypto documentation
+
+npm uuid documentation
+
 
