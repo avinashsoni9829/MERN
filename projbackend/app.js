@@ -13,7 +13,7 @@ const userRoutes=require('./routes/user');
 
 const categoryRoutes=require('./routes/category');
 
-
+const productRoutes=require('./routes/product');
 
 const port=process.env.PORT ||8000;
 //mongoose.connect('mongodb://localhost:27017/test')
@@ -39,6 +39,8 @@ app.use("/api",authRoutes);
 app.use("/api",userRoutes);
 
 app.use("/api",categoryRoutes);
+
+app.use("/api",productRoutes);
 
 
 app.listen(port,()=>{

@@ -42,6 +42,20 @@ var userSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+/*
+    _________________________________
+               
+               VIRTUALS    [ https://mongoosejs.com/docs/tutorials/virtuals.html ]
+    __________________________________
+
+
+    * they are not stored in the database 
+    * used for computed properties on documents
+    * they have getters and setters for computing properties 
+    
+*/
+
+
 userSchema
   .virtual("password")
   .set(function(password) {
@@ -52,16 +66,31 @@ userSchema
   .get(function() {
     return this._password;
   });
+/* 
 
-userSchema.methods = {
-  autheticate: function(plainpassword) {
+ Methods in Mongoose  :  https://mongoosejs.com/docs/2.7.x/docs/methods-statics.html
+ 
+*/
+
+  userSchema.methods = {
+    autheticate: function(plainpassword) {
     return this.securePassword(plainpassword) === this.encry_password;
   },
+/*        
 
+   https://www.mongodb.com/blog/post/password-authentication-with-mongoose-part-1
+
+   https://www.reddit.com/r/node/comments/hnjohu/password_usecase_with_expressjs_crypto_module/
+
+   password hasing in express js 
+
+   https://www.geeksforgeeks.org/node-js-password-hashing-crypto-module/
+
+*/
   securePassword: function(plainpassword) {
     if (!plainpassword) return "";
     try {
-      return crypto
+         return crypto
         .createHmac("sha256", this.salt)
         .update(plainpassword)
         .digest("hex");

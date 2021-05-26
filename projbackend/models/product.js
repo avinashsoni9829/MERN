@@ -1,7 +1,7 @@
-const moongoose=require("moongoose");
-const {ObjectId}=moongoose.Schema;
-
-const productSchema = new moongoose.Schema({
+const mongoose = require("mongoose");
+const { ObjectId } = mongoose.Schema;
+/* spelling error for mongoose may occur */
+const productSchema = new mongoose.Schema({
 
     name:{
         type: String,
@@ -47,5 +47,5 @@ const productSchema = new moongoose.Schema({
 
 
 
-module.exports=moongoose.model('Product',productSchema);
+module.exports=mongoose.model("Product",productSchema);
 
