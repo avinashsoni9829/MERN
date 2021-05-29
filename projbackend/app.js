@@ -29,6 +29,9 @@ mongoose
 
 app.use(cookieParser());
 app.use(cors());
+/*     NEW UPDATE IN CODE HERE              */ 
+app.use(express.json())
+
 
 //My Routes
 app.use("/api", authRoutes);
