@@ -1,14 +1,16 @@
-const moongoose=require("moongoose");
+const mongoose = require("mongoose");
 
-const categorySchema= new moongoose.Schema({
-    name:{
-        type: String,
-        trim: true,
-        requried:true,
-        maxlength: 32,
-        unique:true
+const categorySchema = new mongoose.Schema(
+  {
+    name: {
+      type: String,
+      trim: true,
+      required: true,
+      maxlength: 32,
+      unique: true
     }
-},
-{timestamps: true});
+  },
+  { timestamps: true }
+);
 
-module.exports=moongoose.model("Category",categorySchema);
+module.exports = mongoose.model("Category", categorySchema);
