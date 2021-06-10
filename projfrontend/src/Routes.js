@@ -1,5 +1,10 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import AddCategory from "./admin/AddCategory";
+import AddProduct from "./admin/AddProduct";
+import ManageProducts from "./admin/ManageProducts";
+import MangeCategory from "./admin/MangeCategory";
+import UpdateProduct from "./admin/UpdateProduct";
 import AdminRoute from "./auth/helper/AdminRoutes";
 import PrivateRoute from "./auth/helper/PrivateRoutes";
 import Home from "./core/Home";
@@ -22,6 +27,15 @@ const Routes = () => {
         
         < AdminRoute path="/admin/dashboard" exact component={AdminDashBoard} />
 
+        < AdminRoute path="/admin/create/category" exact component={AddCategory}/>
+
+        < AdminRoute path="/admin/categories" exact component={MangeCategory}/>
+        
+        < AdminRoute path="/admin/create/product" exact component={AddProduct}/>
+
+        < AdminRoute path="/admin/products" exact component={ManageProducts}/>
+
+        < AdminRoute path="/admin/product/update/:productId" exact component={UpdateProduct}/>
 
       </Switch>
     </BrowserRouter>
