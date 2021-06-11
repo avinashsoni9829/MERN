@@ -7,6 +7,7 @@ import MangeCategory from "./admin/MangeCategory";
 import UpdateProduct from "./admin/UpdateProduct";
 import AdminRoute from "./auth/helper/AdminRoutes";
 import PrivateRoute from "./auth/helper/PrivateRoutes";
+import Cart from "./core/Cart";
 import Home from "./core/Home";
 import AdminDashBoard from "./user/AdminDashBoard";
 import signin from "./user/Signin";
@@ -22,6 +23,7 @@ const Routes = () => {
         <Route path="/signup" exact component={signup} />
 
         <Route path="/signin" exact component={signin} />
+        <Route path="/cart" exact component={Cart} />
 
         <PrivateRoute path="/user/dashboard" exact component={UserDashBoard} />
         
