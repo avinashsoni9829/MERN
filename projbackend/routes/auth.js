@@ -15,7 +15,8 @@ router.post(
   [
     // check contains the error to be displayed on voilations
     /* 
-     https://express-validator.github.io/docs/check-api.html
+      
+         https://express-validator.github.io/docs/check-api.html
 
     */
     check("name", "name should be at least 3 char").isLength({ min: 3 }),

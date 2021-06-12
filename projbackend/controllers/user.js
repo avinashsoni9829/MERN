@@ -13,6 +13,14 @@ exports.getUserById = (req,res,next,id) => {
           }
           // user is found 
 
+           /*
+           
+            https://stackoverflow.com/questions/29586463/nodejs-express-profile-property-in-request
+            
+            In the route handler, you can then use req.profile. It's basically a way of
+            propagating data from middleware and app.param() implementations to other parts of the route handling.
+          
+           */
           req.profile = user
 
           next();

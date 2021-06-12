@@ -86,6 +86,8 @@ userSchema
 
    https://www.geeksforgeeks.org/node-js-password-hashing-crypto-module/
 
+   https://nodejs.org/api/crypto.html
+
 */
   securePassword: function(plainpassword) {
     if (!plainpassword) return "";
