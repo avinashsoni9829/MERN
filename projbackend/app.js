@@ -39,7 +39,7 @@ app.use("/api", userRoutes);
 app.use("/api", categoryRoutes);
 app.use("/api", productRoutes);
 app.use("/api", orderRoutes);
-app.use("/api", paymentBRoutes);
+app.use("/api", paymentBRoutes);  
 //PORT
 const port = process.env.PORT || 8000;
 
